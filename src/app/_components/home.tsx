@@ -35,10 +35,9 @@ export default function Home({ searchParams }: any) {
                         This is the start of something new
                     </h2>
                     <p className="text-lg max-w-xl lg:max-w-sm leading-relaxed tracking-tight text-muted-foreground text-left">
-                        Managing a small business today is already tough. Avoid
-                        further complications by ditching outdated, tedious
-                        trade methods. Our goal is to streamline SMB trade,
-                        making it easier and faster than ever.
+                        This description highlights the ease and efficiency of
+                        the video player, aligning with the style of modernizing
+                        and streamlining experiences.
                     </p>
                 </div>
                 <VideoSelector videoList={videoList} currentVideoId={videoId} />
