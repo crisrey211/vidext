@@ -2,28 +2,46 @@
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
-## What's next? How do I make an app with this?
+# Video Player
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+## Overview
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+This project is a Next.js application that features a custom video player with various controls. The video player integrates with the YouTube API to fetch and display video details.
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+## Installation
 
-## Learn More
+To get started with the project, follow these steps:
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+1.  **Clone the Repository**
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+    ```bash
+    git clone https://github.com/yourusername/video-player.git
+    cd video-player
+    ```
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+2.  **Install Dependencies**
+    Ensure you have Node.js and npm (or yarn) installed. Then, run the following command to install the necessary dependencies:
 
-## How do I deploy this?
+        npm install
+        # or
+        yarn install
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+3.  **Set Up Environment Variables**
+
+Rename the .env.example file to .env:
+
+Open the .env file and add your YouTube API key. You need to obtain this key from the Google Developers Console. Add it as follows:
+
+    NEXT_PUBLIC_YOUTUBE_API_KEY=your_youtube_api_key_here
+
+4.  **Running the Project Locally**
+
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    ```
+
+## Example
+
+![Video Player Example](assets/Captura.JPG)
