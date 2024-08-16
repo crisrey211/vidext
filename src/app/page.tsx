@@ -1,8 +1,6 @@
-import Link from 'next/link'
-
-import { LatestPost } from '@/app/_components/post'
-import { api, HydrateClient } from '@/trpc/server'
 import { Badge } from '@/components/ui/badge'
+import { api, HydrateClient } from '@/trpc/server'
+import Videoplayer from './_components/videplayer'
 
 export default async function Home() {
     const hello = await api.post.hello({ text: 'from tRPC' })
@@ -14,7 +12,7 @@ export default async function Home() {
             <main className="w-full py-20 lg:py-40">
                 <div className="container mx-auto">
                     <div className="flex flex-col-reverse lg:flex-row gap-10 lg:items-center">
-                        <div className="bg-muted rounded-md w-full aspect-video h-full flex-1"></div>
+                        <Videoplayer videoId="M7lc1UVf-VE" />
                         <div className="flex gap-4 pl-0 lg:pl-20 flex-col  flex-1">
                             <div>
                                 <Badge>Platform</Badge>
@@ -34,12 +32,6 @@ export default async function Home() {
                         </div>
                     </div>
                 </div>
-                {/* <div className="flex flex-col items-center gap-2">
-                    <p className="text-2xl text-white">
-                        {hello ? hello.greeting : 'Loading tRPC query...'}
-                    </p>
-                </div>
-                <LatestPost /> */}
             </main>
         </HydrateClient>
     )
